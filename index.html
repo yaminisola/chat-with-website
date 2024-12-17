@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Pipeline Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Website Chat Assistant</h1>
+        </header>
+        
+        <div class="url-section">
+            <h2>Add Websites</h2>
+            <div class="url-input-container">
+                <input type="url" id="urlInput" placeholder="Enter website URL">
+                <button onclick="addUrl()">Add URL</button>
+            </div>
+            <div id="urlList" class="url-list"></div>
+            <button id="ingestButton" onclick="ingestUrls()" class="ingest-button">Ingest URLs</button>
+        </div>
+
+        <div class="chat-section">
+            <div id="chatHistory" class="chat-history"></div>
+            <div class="chat-input">
+                <input type="text" id="queryInput" placeholder="Ask a question...">
+                <button onclick="sendQuery()">Send</button>
+            </div>
+        </div>
+
+        <div id="status" class="status-bar"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
